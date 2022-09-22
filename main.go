@@ -12,13 +12,13 @@ func main() {
 		for i := 0; i < 50; i++ {
 			ch1 <- i
 		}
-		close(ch1)
+		//close(ch1)
 	}()
 	go func() {
 		for i := 0; i < 50; i++ {
 			ch2 <- i + 50
 		}
-		close(ch2)
+		//close(ch2)
 	}()
 	for {
 		select {
